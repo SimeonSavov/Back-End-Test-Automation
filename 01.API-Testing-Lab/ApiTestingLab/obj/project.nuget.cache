@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "DCpz404Vq3AL1lFBSjc8X8nW0+NTRA2SG/rPIiOHHZRo2403D9nfJQJLJz+/UhcyJTsT5/maeBpCo0xlYE0CWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simo7\\OneDrive\\Работен плот\\QA Automation-Back-End Testing\\02.API-Testing-C#\\ApiTestingLab\\ApiTestingLab\\ApiTestingLab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simo7\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\simo7\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
+    "C:\\Users\\simo7\\.nuget\\packages\\system.text.json\\8.0.2\\system.text.json.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "Date": "2024-03-07T21:16:57.5176708+02:00",
+    "TemperatureC": 30,
+    "Summary": "New random summary First"
+  },
+  {
+    "Date": "2024-03-07T21:16:57.5176708+02:00",
+    "TemperatureC": 45,
+    "Summary": "New random summary Second"
+  },
+  {
+    "Date": "2024-03-07T21:16:57.5176708+02:00",
+    "TemperatureC": 5,
+    "Summary": "New random summary Third"
+  }
+]
