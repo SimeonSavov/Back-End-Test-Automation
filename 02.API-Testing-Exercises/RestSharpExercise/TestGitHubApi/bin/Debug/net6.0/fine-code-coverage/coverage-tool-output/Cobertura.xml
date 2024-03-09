@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.982142857142857" branch-rate="0.636363636363636" lines-covered="165" lines-valid="168" branches-covered="14" branches-valid="22" complexity="41" version="0" timestamp="1709932728">
+  <sources>
+    <source>C:\Users\simo7\</source>
+  </sources>
+  <packages>
+    <package name="RestSharpServices" line-rate="0.975609756097561" branch-rate="0.5" complexity="27">
+      <classes>
+        <class name="RestSharpServices.GitHubApiClient" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\RestSharpServices\RestSharpServices.cs" line-rate="1" branch-rate="0.5" complexity="18">
+          <methods>
+            <method name="GetAllIssues" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="27" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="31" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="32" hits="1" branch="false" />
+                <line number="33" hits="1" branch="false" />
+                <line number="34" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetIssueByNumber" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="37" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
+                <line number="39" hits="1" branch="false" />
+                <line number="41" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="42" hits="1" branch="false" />
+                <line number="43" hits="1" branch="false" />
+                <line number="44" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="CreateIssue" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="47" hits="1" branch="false" />
+                <line number="48" hits="1" branch="false" />
+                <line number="49" hits="1" branch="false" />
+                <line number="50" hits="1" branch="false" />
+                <line number="52" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="53" hits="1" branch="false" />
+                <line number="54" hits="1" branch="false" />
+                <line number="55" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetAllLabelsForIssue" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="58" hits="1" branch="false" />
+                <line number="59" hits="1" branch="false" />
+                <line number="60" hits="1" branch="false" />
+                <line number="62" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="63" hits="1" branch="false" />
+                <line number="64" hits="1" branch="false" />
+                <line number="66" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetAllCommentsForIssue" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="69" hits="1" branch="false" />
+                <line number="70" hits="1" branch="false" />
+                <line number="71" hits="1" branch="false" />
+                <line number="73" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="74" hits="1" branch="false" />
+                <line number="75" hits="1" branch="false" />
+                <line number="76" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="CreateCommentOnGitHubIssue" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="79" hits="1" branch="false" />
+                <line number="80" hits="1" branch="false" />
+                <line number="81" hits="1" branch="false" />
+                <line number="82" hits="1" branch="false" />
+                <line number="84" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="85" hits="1" branch="false" />
+                <line number="86" hits="1" branch="false" />
+                <line number="87" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GetCommentById" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="90" hits="1" branch="false" />
+                <line number="91" hits="1" branch="false" />
+                <line number="92" hits="1" branch="false" />
+                <line number="94" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="95" hits="1" branch="false" />
+                <line number="96" hits="1" branch="false" />
+                <line number="97" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="EditCommentOnGitHubIssue" signature="(...)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="100" hits="1" branch="false" />
+                <line number="101" hits="1" branch="false" />
+                <line number="102" hits="1" branch="false" />
+                <line number="103" hits="1" branch="false" />
+                <line number="105" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="106" hits="1" branch="false" />
+                <line number="107" hits="1" branch="false" />
+                <line number="108" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="DeleteCommentOnGitHubIssue" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="111" hits="1" branch="false" />
+                <line number="112" hits="1" branch="false" />
+                <line number="113" hits="1" branch="false" />
+                <line number="115" hits="1" branch="false" />
+                <line number="116" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(...)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="9" branch="false" />
+                <line number="17" hits="9" branch="false" />
+                <line number="18" hits="9" branch="false" />
+                <line number="19" hits="9" branch="false" />
+                <line number="20" hits="9" branch="false" />
+                <line number="21" hits="9" branch="false" />
+                <line number="23" hits="9" branch="false" />
+                <line number="24" hits="9" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="16" hits="9" branch="false" />
+            <line number="17" hits="9" branch="false" />
+            <line number="18" hits="9" branch="false" />
+            <line number="19" hits="9" branch="false" />
+            <line number="20" hits="9" branch="false" />
+            <line number="21" hits="9" branch="false" />
+            <line number="23" hits="9" branch="false" />
+            <line number="24" hits="9" branch="false" />
+            <line number="27" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="31" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="32" hits="1" branch="false" />
+            <line number="33" hits="1" branch="false" />
+            <line number="34" hits="1" branch="false" />
+            <line number="37" hits="1" branch="false" />
+            <line number="38" hits="1" branch="false" />
+            <line number="39" hits="1" branch="false" />
+            <line number="41" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="42" hits="1" branch="false" />
+            <line number="43" hits="1" branch="false" />
+            <line number="44" hits="1" branch="false" />
+            <line number="47" hits="1" branch="false" />
+            <line number="48" hits="1" branch="false" />
+            <line number="49" hits="1" branch="false" />
+            <line number="50" hits="1" branch="false" />
+            <line number="52" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="53" hits="1" branch="false" />
+            <line number="54" hits="1" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="58" hits="1" branch="false" />
+            <line number="59" hits="1" branch="false" />
+            <line number="60" hits="1" branch="false" />
+            <line number="62" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="63" hits="1" branch="false" />
+            <line number="64" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+            <line number="69" hits="1" branch="false" />
+            <line number="70" hits="1" branch="false" />
+            <line number="71" hits="1" branch="false" />
+            <line number="73" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="74" hits="1" branch="false" />
+            <line number="75" hits="1" branch="false" />
+            <line number="76" hits="1" branch="false" />
+            <line number="79" hits="1" branch="false" />
+            <line number="80" hits="1" branch="false" />
+            <line number="81" hits="1" branch="false" />
+            <line number="82" hits="1" branch="false" />
+            <line number="84" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="85" hits="1" branch="false" />
+            <line number="86" hits="1" branch="false" />
+            <line number="87" hits="1" branch="false" />
+            <line number="90" hits="1" branch="false" />
+            <line number="91" hits="1" branch="false" />
+            <line number="92" hits="1" branch="false" />
+            <line number="94" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="95" hits="1" branch="false" />
+            <line number="96" hits="1" branch="false" />
+            <line number="97" hits="1" branch="false" />
+            <line number="100" hits="1" branch="false" />
+            <line number="101" hits="1" branch="false" />
+            <line number="102" hits="1" branch="false" />
+            <line number="103" hits="1" branch="false" />
+            <line number="105" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="106" hits="1" branch="false" />
+            <line number="107" hits="1" branch="false" />
+            <line number="108" hits="1" branch="false" />
+            <line number="111" hits="1" branch="false" />
+            <line number="112" hits="1" branch="false" />
+            <line number="113" hits="1" branch="false" />
+            <line number="115" hits="1" branch="false" />
+            <line number="116" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="RestSharpServices.Models.Comment" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\RestSharpServices\Models\Comment.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="97" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Body" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="95" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="97" branch="false" />
+            <line number="16" hits="95" branch="false" />
+          </lines>
+        </class>
+        <class name="RestSharpServices.Models.Issue" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\RestSharpServices\Models\Issue.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="64" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Number" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="66" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="65" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Body" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="32" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="64" branch="false" />
+            <line number="17" hits="66" branch="false" />
+            <line number="20" hits="65" branch="false" />
+            <line number="23" hits="32" branch="false" />
+          </lines>
+        </class>
+        <class name="RestSharpServices.Models.Label" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\RestSharpServices\Models\Label.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="9" branch="false" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="9" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="9" branch="false" />
+            <line number="16" hits="9" branch="false" />
+          </lines>
+        </class>
+        <class name="RestSharpServices.Program" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\RestSharpServices\Program.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Main" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="false" />
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="false" />
+            <line number="8" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="TestGitHubApi" line-rate="0.988372093023256" branch-rate="1" complexity="14">
+      <classes>
+        <class name="AutoGeneratedProgram" filename="C:\Users\simo7\.nuget\packages\microsoft.net.test.sdk\17.5.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Main" signature="(...)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="TestGitHubApi.TestGitHubApi" filename="C:\Users\simo7\OneDrive\Работен плот\QA Automation-Back-End Testing\03.Exercise-API-Testing\RestSharpExercise\TestGitHubApi\TestGitHubApi.cs" line-rate="1" branch-rate="1" complexity="13">
+          <methods>
+            <method name="Setup" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="9" branch="false" />
+                <line number="24" hits="9" branch="false" />
+                <line number="25" hits="9" branch="false" />
+                <line number="26" hits="9" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_GetAllIssuesFromARepo" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="31" hits="1" branch="false" />
+                <line number="35" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
+                <line number="40" hits="63" branch="true" condition-coverage="100% (2/2)" />
+                <line number="41" hits="30" branch="false" />
+                <line number="42" hits="30" branch="false" />
+                <line number="43" hits="30" branch="false" />
+                <line number="44" hits="30" branch="false" />
+                <line number="45" hits="30" branch="false" />
+                <line number="46" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_GetIssueByValidNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="50" hits="1" branch="false" />
+                <line number="52" hits="1" branch="false" />
+                <line number="55" hits="1" branch="false" />
+                <line number="58" hits="1" branch="false" />
+                <line number="59" hits="1" branch="false" />
+                <line number="60" hits="1" branch="false" />
+                <line number="61" hits="1" branch="false" />
+                <line number="62" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_GetAllLabelsForIssue" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="66" hits="1" branch="false" />
+                <line number="68" hits="1" branch="false" />
+                <line number="71" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+                <line number="76" hits="9" branch="true" condition-coverage="100% (2/2)" />
+                <line number="77" hits="3" branch="false" />
+                <line number="78" hits="3" branch="false" />
+                <line number="79" hits="3" branch="false" />
+                <line number="81" hits="3" branch="false" />
+                <line number="82" hits="3" branch="false" />
+                <line number="83" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_GetAllCommentsForIssue" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="87" hits="1" branch="false" />
+                <line number="89" hits="1" branch="false" />
+                <line number="92" hits="1" branch="false" />
+                <line number="95" hits="1" branch="false" />
+                <line number="97" hits="63" branch="true" condition-coverage="100% (2/2)" />
+                <line number="98" hits="30" branch="false" />
+                <line number="99" hits="30" branch="false" />
+                <line number="100" hits="30" branch="false" />
+                <line number="102" hits="30" branch="false" />
+                <line number="103" hits="30" branch="false" />
+                <line number="104" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_CreateGitHubIssue" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="108" hits="1" branch="false" />
+                <line number="110" hits="1" branch="false" />
+                <line number="111" hits="1" branch="false" />
+                <line number="114" hits="1" branch="false" />
+                <line number="117" hits="1" branch="false" />
+                <line number="118" hits="1" branch="false" />
+                <line number="119" hits="1" branch="false" />
+                <line number="120" hits="1" branch="false" />
+                <line number="121" hits="1" branch="false" />
+                <line number="122" hits="1" branch="false" />
+                <line number="123" hits="2" branch="false" />
+                <line number="125" hits="1" branch="false" />
+                <line number="126" hits="1" branch="false" />
+                <line number="127" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_CreateCommentOnGitHubIssue" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="131" hits="1" branch="false" />
+                <line number="133" hits="1" branch="false" />
+                <line number="134" hits="1" branch="false" />
+                <line number="137" hits="1" branch="false" />
+                <line number="140" hits="1" branch="false" />
+                <line number="142" hits="1" branch="false" />
+                <line number="143" hits="1" branch="false" />
+                <line number="144" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_GetCommentById" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="148" hits="1" branch="false" />
+                <line number="150" hits="1" branch="false" />
+                <line number="153" hits="1" branch="false" />
+                <line number="156" hits="1" branch="false" />
+                <line number="157" hits="1" branch="false" />
+                <line number="158" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_EditCommentOnGitHubIssue" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="163" hits="1" branch="false" />
+                <line number="165" hits="1" branch="false" />
+                <line number="166" hits="1" branch="false" />
+                <line number="169" hits="1" branch="false" />
+                <line number="172" hits="1" branch="false" />
+                <line number="173" hits="1" branch="false" />
+                <line number="174" hits="1" branch="false" />
+                <line number="175" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Test_DeleteCommentOnGitHubIssue" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="179" hits="1" branch="false" />
+                <line number="181" hits="1" branch="false" />
+                <line number="184" hits="1" branch="false" />
+                <line number="187" hits="1" branch="false" />
+                <line number="188" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="9" branch="false" />
+            <line number="24" hits="9" branch="false" />
+            <line number="25" hits="9" branch="false" />
+            <line number="26" hits="9" branch="false" />
+            <line number="31" hits="1" branch="false" />
+            <line number="35" hits="1" branch="false" />
+            <line number="38" hits="1" branch="false" />
+            <line number="40" hits="63" branch="true" condition-coverage="100% (2/2)" />
+            <line number="41" hits="30" branch="false" />
+            <line number="42" hits="30" branch="false" />
+            <line number="43" hits="30" branch="false" />
+            <line number="44" hits="30" branch="false" />
+            <line number="45" hits="30" branch="false" />
+            <line number="46" hits="1" branch="false" />
+            <line number="50" hits="1" branch="false" />
+            <line number="52" hits="1" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="58" hits="1" branch="false" />
+            <line number="59" hits="1" branch="false" />
+            <line number="60" hits="1" branch="false" />
+            <line number="61" hits="1" branch="false" />
+            <line number="62" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+            <line number="68" hits="1" branch="false" />
+            <line number="71" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="76" hits="9" branch="true" condition-coverage="100% (2/2)" />
+            <line number="77" hits="3" branch="false" />
+            <line number="78" hits="3" branch="false" />
+            <line number="79" hits="3" branch="false" />
+            <line number="81" hits="3" branch="false" />
+            <line number="82" hits="3" branch="false" />
+            <line number="83" hits="1" branch="false" />
+            <line number="87" hits="1" branch="false" />
+            <line number="89" hits="1" branch="false" />
+            <line number="92" hits="1" branch="false" />
+            <line number="95" hits="1" branch="false" />
+            <line number="97" hits="63" branch="true" condition-coverage="100% (2/2)" />
+            <line number="98" hits="30" branch="false" />
+            <line number="99" hits="30" branch="false" />
+            <line number="100" hits="30" branch="false" />
+            <line number="102" hits="30" branch="false" />
+            <line number="103" hits="30" branch="false" />
+            <line number="104" hits="1" branch="false" />
+            <line number="108" hits="1" branch="false" />
+            <line number="110" hits="1" branch="false" />
+            <line number="111" hits="1" branch="false" />
+            <line number="114" hits="1" branch="false" />
+            <line number="117" hits="1" branch="false" />
+            <line number="118" hits="1" branch="false" />
+            <line number="119" hits="1" branch="false" />
+            <line number="120" hits="1" branch="false" />
+            <line number="121" hits="1" branch="false" />
+            <line number="122" hits="1" branch="false" />
+            <line number="123" hits="2" branch="false" />
+            <line number="125" hits="1" branch="false" />
+            <line number="126" hits="1" branch="false" />
+            <line number="127" hits="1" branch="false" />
+            <line number="131" hits="1" branch="false" />
+            <line number="133" hits="1" branch="false" />
+            <line number="134" hits="1" branch="false" />
+            <line number="137" hits="1" branch="false" />
+            <line number="140" hits="1" branch="false" />
+            <line number="142" hits="1" branch="false" />
+            <line number="143" hits="1" branch="false" />
+            <line number="144" hits="1" branch="false" />
+            <line number="148" hits="1" branch="false" />
+            <line number="150" hits="1" branch="false" />
+            <line number="153" hits="1" branch="false" />
+            <line number="156" hits="1" branch="false" />
+            <line number="157" hits="1" branch="false" />
+            <line number="158" hits="1" branch="false" />
+            <line number="163" hits="1" branch="false" />
+            <line number="165" hits="1" branch="false" />
+            <line number="166" hits="1" branch="false" />
+            <line number="169" hits="1" branch="false" />
+            <line number="172" hits="1" branch="false" />
+            <line number="173" hits="1" branch="false" />
+            <line number="174" hits="1" branch="false" />
+            <line number="175" hits="1" branch="false" />
+            <line number="179" hits="1" branch="false" />
+            <line number="181" hits="1" branch="false" />
+            <line number="184" hits="1" branch="false" />
+            <line number="187" hits="1" branch="false" />
+            <line number="188" hits="1" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
