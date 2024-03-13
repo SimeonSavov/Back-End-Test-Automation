@@ -1,0 +1,703 @@
+{
+	"info": {
+		"_postman_id": "983b4160-1a95-4852-aed6-c24f0fc30eb6",
+		"name": "GitHub API to My Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28660138"
+	},
+	"item": [
+		{
+			"name": "Get All Issues",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response status code is 200\", function () {\r",
+							"    pm.expect(pm.response.code).to.equal(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve the list of issues for a specific repository owned by \"testnakov\". The response status for the last execution was 200, indicating a successful request."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Issue By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/2",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"2"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve information about a specific issue in the given repository."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test('Response contains id and number as integers', () => {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('id').that.is.a('number');\r",
+							"    pm.expect(jsonData).to.have.property('number').that.is.a('number');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"This is Issue created by myself to check if it is correctly post\",\r\n    \"body\": \"Successfully post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues"
+					]
+				},
+				"description": "This endpoint allows you to create a new issue in the specified repository. The request should be sent as an HTTP POST to the specified URL with the owner's username and the repository name in the path.\n\n``` json\n{\n  \"title\": \"Issue Title\",\n  \"body\": \"Description of the issue\"\n}\n\n ```\n\nExample response:\n\n``` json\n{\n  \"url\": \"issue_url\",\n  \"repository_url\": \"repository_url\",\n  \"labels_url\": \"labels_url\",\n  \"comments_url\": \"comments_url\",\n  \"events_url\": \"events_url\",\n  \"html_url\": \"html_url\",\n  \"id\": 123,\n  \"node_id\": \"node_id\",\n  \"number\": 1,\n  \"title\": \"Issue Title\",\n  \"user\": {\n    \"login\": \"username\",\n    \"id\": 123,\n    \"node_id\": \"node_id\",\n    \"avatar_url\": \"avatar_url\",\n    \"gravatar_id\": \"gravatar_id\",\n    \"url\": \"user_url\",\n    \"html_url\": \"user_html_url\",\n    \"followers_url\": \"followers_url\",\n    \"following_url\": \"following_url\",\n    \"type\": \"user_type\",\n    \"site_admin\": true\n  },\n  \"labels\": [],\n  \"state\": \"open\",\n  \"locked\": false,\n  \"assignee\": null,\n  \"assignees\": [],\n  \"milestone\": null,\n  \"comments\": 0,\n  \"created_at\": \"creation_date\",\n  \"updated_at\": \"update_date\",\n  \"closed_at\": null,\n  \"author_association\": \"author_association\",\n  \"active_lock_reason\": null,\n  \"body\": \"Issue Description\",\n  \"closed_by\": null,\n  \"reactions\": {\n    \"url\": \"reactions_url\",\n    \"total_count\": 0,\n    \"+1\": 0,\n    \"-1\": 0,\n    \"laugh\": 0,\n    \"hooray\": 0,\n    \"confused\": 0,\n    \"heart\": 0,\n    \"rocket\": 0,\n    \"eyes\": 0\n  },\n  \"timeline_url\": \"timeline_url\",\n  \"performed_via_github_app\": null,\n  \"state_reason\": null\n}\n\n ```"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Labels For Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/1/labels",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"1",
+						"labels"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve the labels associated with a specific issue in a repository."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Issue Labels",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful request\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"labels\": [\"bug\", \"documentation\", \"duplicate\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/3/labels",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"3",
+						"labels"
+					]
+				},
+				"description": "This endpoint allows you to add labels to a specific issue in a repository."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All Labels by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/3/labels",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"3",
+						"labels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Comments For Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/1/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"1",
+						"comments"
+					]
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve the comments for a specific issue in a GitHub repository."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Comment for Issue",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"This is comment for my issue doing it from Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/4/comments",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"4",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/comments/1993847131",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"comments",
+						"1993847131"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Comment by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"This is UPDATED comment from Postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/comments/1993847131",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"comments",
+						"1993847131"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment By Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/repos/{{owner}}/{{repoName}}/issues/comments/1993847131",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"repos",
+						"{{owner}}",
+						"{{repoName}}",
+						"issues",
+						"comments",
+						"1993847131"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.github.com"
+		},
+		{
+			"key": "repoName",
+			"value": "your_repo_name"
+		},
+		{
+			"key": "owner",
+			"value": "your_github_name"
+		}
+	]
+}
