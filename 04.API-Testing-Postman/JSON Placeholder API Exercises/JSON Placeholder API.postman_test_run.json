@@ -1,0 +1,350 @@
+{
+	"id": "b576badb-62b0-4113-8dc2-48ddf5609a1c",
+	"name": "JSON Placeholder API",
+	"timestamp": "2024-03-13T22:18:51.872Z",
+	"collection_id": "28660138-07809a3c-1290-4edc-adc9-d99312c49b45",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 13,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-13T22:18:49.308Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "39a5bc6f-9167-446f-ac0a-286c341bb6aa",
+			"name": "Get All Posts",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 62,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verify that posts have title": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that posts have title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				62
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verify that posts have title": true
+				}
+			]
+		},
+		{
+			"id": "720cfb7a-3f38-434a-bfb6-0970c6138234",
+			"name": "Get All Albums",
+			"url": "https://jsonplaceholder.typicode.com/albums",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a074c654-b46f-462c-a76a-9af011bd7697",
+			"name": "Get All Photos",
+			"url": "https://jsonplaceholder.typicode.com/photos",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Album to have property title": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Album to have property title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Album to have property title": true
+				}
+			]
+		},
+		{
+			"id": "c50c8b95-11ee-4874-b489-27f574c43100",
+			"name": "Get All Users",
+			"url": "https://jsonplaceholder.typicode.com/users",
+			"time": 65,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verify the name is string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the name is string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				65
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verify the name is string": true
+				}
+			]
+		},
+		{
+			"id": "8615645e-4326-4a53-a899-4741eba98ab6",
+			"name": "Get Post by Id",
+			"url": "https://jsonplaceholder.typicode.com/posts/10",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "589a3ccc-ae66-4fb0-b5d9-6bc7111e0c21",
+			"name": "Get Post Comments by Id",
+			"url": "https://jsonplaceholder.typicode.com/posts/1/comments",
+			"time": 50,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "30e7a4bd-7654-4b0e-ae28-76c90af9ce6e",
+			"name": "Create a Post",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 153,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "97fd38a1-ab76-4bee-97ba-25febb743bf2",
+			"name": "Update a Post",
+			"url": "https://jsonplaceholder.typicode.com/posts/1",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ac3b0649-29e7-47ec-a062-a5d59b6a75ab",
+			"name": "Patch a Post",
+			"url": "https://jsonplaceholder.typicode.com/posts/10",
+			"time": 151,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				151
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "48ef05a6-4408-4880-96ce-4f738f1962a9",
+			"name": "Delete a Post",
+			"url": "https://jsonplaceholder.typicode.com/posts/10",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 957,
+	"collection": {
+		"requests": [
+			{
+				"id": "39a5bc6f-9167-446f-ac0a-286c341bb6aa",
+				"method": "GET"
+			},
+			{
+				"id": "720cfb7a-3f38-434a-bfb6-0970c6138234",
+				"method": "GET"
+			},
+			{
+				"id": "a074c654-b46f-462c-a76a-9af011bd7697",
+				"method": "GET"
+			},
+			{
+				"id": "c50c8b95-11ee-4874-b489-27f574c43100",
+				"method": "GET"
+			},
+			{
+				"id": "8615645e-4326-4a53-a899-4741eba98ab6",
+				"method": "GET"
+			},
+			{
+				"id": "589a3ccc-ae66-4fb0-b5d9-6bc7111e0c21",
+				"method": "GET"
+			},
+			{
+				"id": "30e7a4bd-7654-4b0e-ae28-76c90af9ce6e",
+				"method": "POST"
+			},
+			{
+				"id": "97fd38a1-ab76-4bee-97ba-25febb743bf2",
+				"method": "PUT"
+			},
+			{
+				"id": "ac3b0649-29e7-47ec-a062-a5d59b6a75ab",
+				"method": "PATCH"
+			},
+			{
+				"id": "48ef05a6-4408-4880-96ce-4f738f1962a9",
+				"method": "DELETE"
+			}
+		]
+	}
+}
