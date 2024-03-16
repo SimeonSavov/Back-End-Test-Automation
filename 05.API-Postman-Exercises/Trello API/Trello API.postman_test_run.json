@@ -1,0 +1,428 @@
+{
+	"id": "e5abac8c-fe07-4a17-83b8-a20fd9d35363",
+	"name": "Trello API",
+	"timestamp": "2024-03-16T15:19:35.234Z",
+	"collection_id": "28660138-4252b04e-b332-449e-b0d2-3fdb038abae1",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 26,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-03-16T15:19:27.231Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d07cd632-dc0f-4992-9cb2-31b35e7d5c55",
+			"name": "Get All Boards",
+			"url": "https://api.trello.com/1/members/me/boards?key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 234,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response less than 30 second": true,
+				"Response body is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response less than 30 second": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				234
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response less than 30 second": true,
+					"Response body is not empty": true
+				}
+			]
+		},
+		{
+			"id": "1a847b75-3e96-4836-8570-0c4120abe552",
+			"name": "Create a Board",
+			"url": "https://api.trello.com/1/boards/?name=Learning Postman&key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 383,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Board has name 'Learning Postman'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Board has name 'Learning Postman'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				383
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Board has name 'Learning Postman'": true
+				}
+			]
+		},
+		{
+			"id": "48e6c38d-4769-481a-b0a7-72032a811ac1",
+			"name": "Get Single Board",
+			"url": "https://api.trello.com/1/boards/65f5b88058b1d1d068d55822?key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 392,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has name 'string' and is 'Learning Postman'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has name 'string' and is 'Learning Postman'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has name 'string' and is 'Learning Postman'": true
+				}
+			]
+		},
+		{
+			"id": "c3adaf4f-4e2e-4873-9595-937e5d0b2b48",
+			"name": "Create a TO DO List",
+			"url": "https://api.trello.com/1/boards/65f5b88058b1d1d068d55822/lists?name=TO DO&key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 414,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response has all expected props": true,
+				"Closed is false and it is boolean": true,
+				"IdBoard is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has all expected props": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Closed is false and it is boolean": {
+					"pass": 1,
+					"fail": 0
+				},
+				"IdBoard is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				414
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response has all expected props": true,
+					"Closed is false and it is boolean": true,
+					"IdBoard is correct": true
+				}
+			]
+		},
+		{
+			"id": "67b008e5-aeba-452c-a013-3855bc79c2fb",
+			"name": "Create Unique Name List",
+			"url": "https://api.trello.com/1/boards/65f5b88058b1d1d068d55822/lists?name=List-74438&key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 434,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"List Name is match uniqueListName": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List Name is match uniqueListName": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				434
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"List Name is match uniqueListName": true
+				}
+			]
+		},
+		{
+			"id": "03408a64-7ebf-41ca-a55f-a9488a12de47",
+			"name": "Get All Lists from Board",
+			"url": "https://api.trello.com/1/boards/65f5b88058b1d1d068d55822/lists?key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 363,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is an array and is not empty": true,
+				"List with unique name is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array and is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List with unique name is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				363
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is an array and is not empty": true,
+					"List with unique name is present": true
+				}
+			]
+		},
+		{
+			"id": "18abb28d-6c1a-4a8f-bc3a-087a6870d396",
+			"name": "Create Card in TO DO List",
+			"url": "https://api.trello.com/1/cards?idList=65f5b881cfc973419f120e5c&name=Sign-up for Trello&key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 559,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Card name is correct": true,
+				"Labels and attachments are empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card name is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Labels and attachments are empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				559
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Card name is correct": true,
+					"Labels and attachments are empty": true
+				}
+			]
+		},
+		{
+			"id": "82fef205-71e0-439f-ba80-6510a9cc4077",
+			"name": "Move Card to Unique Name List",
+			"url": "https://api.trello.com/1/cards/65f5b883a0d139238468c752?idList=65f5b8826ce0bd6041b03bc8&key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 469,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Card Id is correct": true,
+				"List is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Card Id is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"List is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				469
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Card Id is correct": true,
+					"List is correct": true
+				}
+			]
+		},
+		{
+			"id": "fd033d32-1300-4ef4-84fa-ebf33d8cbeef",
+			"name": "Delete a Card",
+			"url": "https://api.trello.com/1/cards/65f5b883a0d139238468c752?key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 616,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"There is an object limits": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"There is an object limits": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				616
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"There is an object limits": true
+				}
+			]
+		},
+		{
+			"id": "ccd674fc-9266-44dd-ae78-f3295e34d402",
+			"name": "Delete a Board",
+			"url": "https://api.trello.com/1/boards/65f5b88058b1d1d068d55822?key=ead8c1ee5504f06e37002ccb10d602b3&token=ATTAb1b57923a5dc8ad61619b34181fb38d8502decef30aade4015e929abe4ab30b8CB28C4E1",
+			"time": 1761,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"There is an empty element _value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"There is an empty element _value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1761
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"There is an empty element _value": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 5625,
+	"collection": {
+		"requests": [
+			{
+				"id": "d07cd632-dc0f-4992-9cb2-31b35e7d5c55",
+				"method": "GET"
+			},
+			{
+				"id": "1a847b75-3e96-4836-8570-0c4120abe552",
+				"method": "POST"
+			},
+			{
+				"id": "48e6c38d-4769-481a-b0a7-72032a811ac1",
+				"method": "GET"
+			},
+			{
+				"id": "c3adaf4f-4e2e-4873-9595-937e5d0b2b48",
+				"method": "POST"
+			},
+			{
+				"id": "67b008e5-aeba-452c-a013-3855bc79c2fb",
+				"method": "POST"
+			},
+			{
+				"id": "03408a64-7ebf-41ca-a55f-a9488a12de47",
+				"method": "GET"
+			},
+			{
+				"id": "18abb28d-6c1a-4a8f-bc3a-087a6870d396",
+				"method": "POST"
+			},
+			{
+				"id": "82fef205-71e0-439f-ba80-6510a9cc4077",
+				"method": "PUT"
+			},
+			{
+				"id": "fd033d32-1300-4ef4-84fa-ebf33d8cbeef",
+				"method": "DELETE"
+			},
+			{
+				"id": "ccd674fc-9266-44dd-ae78-f3295e34d402",
+				"method": "DELETE"
+			}
+		]
+	}
+}
