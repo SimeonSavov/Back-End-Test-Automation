@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Trello API" tests="10" time="5.136">
+  <testsuite name="Get All Boards" id="f2012bd9-3e60-4247-aa5e-18b4c89524fb" timestamp="2024-03-19T07:37:31.238Z" tests="3" failures="0" errors="0" time="0.595">
+    <testcase name="Status code is 200" time="0.595" classname="TrelloApi"/>
+    <testcase name="Response less than 30 second" time="0.595" classname="TrelloApi"/>
+    <testcase name="Response body is not empty" time="0.595" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Create a Board" id="7d641592-e6e0-4f72-ba36-c947939c24fa" timestamp="2024-03-19T07:37:31.238Z" tests="2" failures="0" errors="0" time="0.418">
+    <testcase name="Status code is 200" time="0.418" classname="TrelloApi"/>
+    <testcase name="Board has name 'Learning Postman'" time="0.418" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Get Single Board" id="d421ae85-7cad-4a10-b680-5613c4bbb0d9" timestamp="2024-03-19T07:37:31.238Z" tests="2" failures="0" errors="0" time="0.436">
+    <testcase name="Status code is 200" time="0.436" classname="TrelloApi"/>
+    <testcase name="Response has name 'string' and is 'Learning Postman'" time="0.436" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Create a TO DO List" id="3182fed5-a46f-492d-a0c4-7954ccdcfb00" timestamp="2024-03-19T07:37:31.238Z" tests="4" failures="0" errors="0" time="0.258">
+    <testcase name="Status code is 200" time="0.258" classname="TrelloApi"/>
+    <testcase name="Response has all expected props" time="0.258" classname="TrelloApi"/>
+    <testcase name="Closed is false and it is boolean" time="0.258" classname="TrelloApi"/>
+    <testcase name="IdBoard is correct" time="0.258" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Create Unique Name List" id="29e1af5b-b2fd-42a7-b06f-7c1b5a467555" timestamp="2024-03-19T07:37:31.238Z" tests="2" failures="0" errors="0" time="0.447">
+    <testcase name="Status code is 200" time="0.447" classname="TrelloApi"/>
+    <testcase name="List Name is match uniqueListName" time="0.447" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Get All Lists from Board" id="cb2dad5a-5641-4be5-8210-f1e000bb146f" timestamp="2024-03-19T07:37:31.238Z" tests="3" failures="0" errors="0" time="0.200">
+    <testcase name="Status code is 200" time="0.200" classname="TrelloApi"/>
+    <testcase name="Response is an array and is not empty" time="0.200" classname="TrelloApi"/>
+    <testcase name="List with unique name is present" time="0.200" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Create Card in TO DO List" id="1be3580c-9320-4e81-9c4c-6b221e71bcb0" timestamp="2024-03-19T07:37:31.238Z" tests="3" failures="0" errors="0" time="0.581">
+    <testcase name="Status code is 200" time="0.581" classname="TrelloApi"/>
+    <testcase name="Card name is correct" time="0.581" classname="TrelloApi"/>
+    <testcase name="Labels and attachments are empty" time="0.581" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Move Card to Unique Name List" id="d1a265fd-64d0-4860-b22e-b3d957aa7026" timestamp="2024-03-19T07:37:31.238Z" tests="3" failures="0" errors="0" time="0.322">
+    <testcase name="Status code is 200" time="0.322" classname="TrelloApi"/>
+    <testcase name="Card Id is correct" time="0.322" classname="TrelloApi"/>
+    <testcase name="List is correct" time="0.322" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Delete a Card" id="26300664-4107-45d0-b701-9cca604d06fb" timestamp="2024-03-19T07:37:31.238Z" tests="2" failures="0" errors="0" time="0.543">
+    <testcase name="Status code is 200" time="0.543" classname="TrelloApi"/>
+    <testcase name="There is an object limits" time="0.543" classname="TrelloApi"/>
+  </testsuite>
+  <testsuite name="Delete a Board" id="27e5c20e-bfc0-4125-adb8-2cee4523c9e4" timestamp="2024-03-19T07:37:31.238Z" tests="2" failures="0" errors="0" time="1.336">
+    <testcase name="Status code is 200" time="1.336" classname="TrelloApi"/>
+    <testcase name="There is an empty element _value" time="1.336" classname="TrelloApi"/>
+  </testsuite>
+</testsuites>
