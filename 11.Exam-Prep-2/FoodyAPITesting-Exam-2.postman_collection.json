@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "45cccb8f-0efd-4bb9-b3e0-43a394d23922",
+		"name": "FoodyAPITesting-Exam-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28660138"
+	},
+	"item": [
+		{
+			"name": "Login and Authentication",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response body has correct data\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"username\")\r",
+							"    pm.expect(responseData).to.have.property(\"password\")\r",
+							"    pm.expect(responseData).to.have.property(\"accessToken\")\r",
+							"})\r",
+							"\r",
+							"pm.collectionVariables.set(\"token\", responseData.accessToken)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Your Username here\",\r\n    \"password\": \"Your Password here\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/User/Authentication",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a New Food",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", () => {\r",
+							"    pm.response.to.have.status(201)\r",
+							"})\r",
+							"\r",
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response body has correct data\", () => {\r",
+							"    pm.expect(responseData).to.have.property(\"foodId\")\r",
+							"})\r",
+							"\r",
+							"pm.collectionVariables.set(\"foodId\", responseData.foodId)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomNum = Math.floor(Math.random()*1000)\r",
+							"var randomFood = \"Pasta\" + randomNum\r",
+							"\r",
+							"pm.collectionVariables.set(\"randomFood\", randomFood)"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{randomFood}}\",\r\n    \"description\": \"Description of the {{randomFood}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/Food/Create",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"Food",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search a Food by Name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is an Array and contains the food\", () => {\r",
+							"    const randomFoodName = pm.collectionVariables.get(\"randomFood\")\r",
+							"    pm.expect(responseData[0].name).to.eql(randomFoodName)\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/Food/Search?keyword={{randomFood}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"Food",
+						"Search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "{{randomFood}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit the Name of the Food that you Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response message is correct\", () => {\r",
+							"    pm.expect(responseData.msg).to.eql(\"Successfully edited\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"path\": \"/name\",\r\n        \"op\": \"replace\",\r\n        \"value\": \"Pizza\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/Food/Edit/:foodId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"Food",
+						"Edit",
+						":foodId"
+					],
+					"variable": [
+						{
+							"key": "foodId",
+							"value": "{{foodId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the Edited Food",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200)\r",
+							"})\r",
+							"\r",
+							"const responseData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response message is correct\", () => {\r",
+							"    pm.expect(responseData.msg).to.eql(\"Deleted successfully!\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/Food/Delete/:foodId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"Food",
+						"Delete",
+						":foodId"
+					],
+					"variable": [
+						{
+							"key": "foodId",
+							"value": "{{foodId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:86",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "randomFood",
+			"value": ""
+		},
+		{
+			"key": "foodId",
+			"value": ""
+		}
+	]
+}
