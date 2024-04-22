@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simo7\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\QA Automation-Back-End Testing\\20.Exam-21April2024\\StorySpoilerAPITesting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{87BAF7B8-3AF8-426A-ACA4-29EBD1045538}|StorySpoilerAPITesting\\StorySpoilerAPITesting.csproj|c:\\users\\simo7\\onedrive\\\u0440\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\qa automation-back-end testing\\20.exam-21april2024\\storyspoilerapitesting\\storyspoilerapitesting\\storyapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87BAF7B8-3AF8-426A-ACA4-29EBD1045538}|StorySpoilerAPITesting\\StorySpoilerAPITesting.csproj|solutionrelative:storyspoilerapitesting\\storyapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoryAPITests.cs",
+              "DocumentMoniker": "C:\\Users\\simo7\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\QA Automation-Back-End Testing\\20.Exam-21April2024\\StorySpoilerAPITesting\\StorySpoilerAPITesting\\StoryAPITests.cs",
+              "RelativeDocumentMoniker": "StorySpoilerAPITesting\\StoryAPITests.cs",
+              "ToolTip": "C:\\Users\\simo7\\OneDrive\\\u0420\u0430\u0431\u043E\u0442\u0435\u043D \u043F\u043B\u043E\u0442\\QA Automation-Back-End Testing\\20.Exam-21April2024\\StorySpoilerAPITesting\\StorySpoilerAPITesting\\StoryAPITests.cs",
+              "RelativeToolTip": "StorySpoilerAPITesting\\StoryAPITests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T06:22:10.388Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
